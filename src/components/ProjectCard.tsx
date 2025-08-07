@@ -1,4 +1,4 @@
-import { Project } from "@/presets/types";
+import { Project } from "@/presets/work";
 import Image from "next/image";
 
 export default function ProjectCard({

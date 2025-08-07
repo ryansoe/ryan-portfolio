@@ -1,5 +1,6 @@
 "use client";
 
+import HeroSection from "@/components/HeroSection";
 import ProjectSection from "@/components/ProjectSection";
 import { useState } from "react";
 
@@ -18,8 +19,7 @@ export default function Home() {
 
   return (
     <div>
-      <h1>Ryan Soe</h1>
-      <p>Software Engineer</p>
+      <HeroSection />
       <ProjectSection />
     </div>
   );
