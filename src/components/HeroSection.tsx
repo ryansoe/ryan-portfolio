@@ -2,7 +2,7 @@ import { personalInfo } from "@/presets/personal";
 
 const HeroSection = () => (
   <section className="my-16 px-4">
-    <div className="max-w-[66.67%] mx-auto text-left">
+    <div className="max-w-full sm:max-w-[95%] lg:max-w-[66.67%] mx-auto text-left">
       <h1 className="text-5xl font-medium mb-6 text-black">
         {personalInfo.name}
       </h1>
@@ -11,7 +11,7 @@ const HeroSection = () => (
         {personalInfo.description}
       </p>
 
-      <div className="flex justify-start gap-6">
+      <div className="flex justify-start gap-6 flex-wrap">
         {personalInfo.links.map((link, index) => (
           <a
             key={index}

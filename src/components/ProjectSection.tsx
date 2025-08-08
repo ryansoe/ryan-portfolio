@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 
 const ProjectSection = () => (
   <section className="my-16 px-4">
-    <div className="max-w-[66.67%] mx-auto">
+    <div className="max-w-full sm:max-w-[95%] lg:max-w-[66.67%] mx-auto">
       <h2 className="text-2xl font-bold uppercase underline mb-5 text-center">
         Projects
       </h2>
