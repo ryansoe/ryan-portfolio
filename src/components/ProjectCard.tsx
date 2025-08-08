@@ -22,7 +22,7 @@ export default function ProjectCard({
               rel="noopener noreferrer"
               className="block"
             >
-              <div className="w-full h-44 sm:h-52 md:w-56 md:h-36 overflow-hidden bg-gray-50 rounded-md shadow-sm">
+              <div className="w-full h-44 sm:h-52 md:w-56 md:h-36 overflow-hidden bg-gray-50 shadow-sm">
                 <Image
                   src={imageUrl}
                   alt={title}
@@ -33,7 +33,7 @@ export default function ProjectCard({
               </div>
             </a>
           ) : (
-            <div className="w-full h-44 sm:h-52 md:w-56 md:h-36 overflow-hidden bg-gray-50 rounded-md shadow-sm">
+            <div className="w-full h-44 sm:h-52 md:w-56 md:h-36 overflow-hidden bg-gray-50 shadow-sm">
               <Image
                 src={imageUrl}
                 alt={title}
@@ -81,12 +81,12 @@ export default function ProjectCard({
                 href={projectUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-1 text-sm font-medium text-black hover:underline"
+                className="group relative inline-flex items-center gap-1 text-sm font-medium text-black after:absolute after:left-0 after:-bottom-[2px] after:h-[1px] after:w-0 after:bg-black after:transition-[width] after:duration-200 hover:after:w-full focus-visible:after:w-full"
               >
                 Explore{" "}
                 <span
                   aria-hidden
-                  className="transition-transform duration-200 group-hover:translate-x-0.5"
+                  className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 >
                   ↗
                 </span>
@@ -97,12 +97,12 @@ export default function ProjectCard({
                 href={githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-1 text-sm font-medium text-black hover:underline"
+                className="group relative inline-flex items-center gap-1 text-sm font-medium text-black after:absolute after:left-0 after:-bottom-[2px] after:h-[1px] after:w-0 after:bg-black after:transition-[width] after:duration-200 hover:after:w-full focus-visible:after:w-full"
               >
                 GitHub{" "}
                 <span
                   aria-hidden
-                  className="transition-transform duration-200 group-hover:translate-x-0.5"
+                  className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 >
                   ↗
                 </span>

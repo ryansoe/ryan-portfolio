@@ -22,5 +22,13 @@ export const personalInfo: PersonalInfo = {
       url: "https://www.linkedin.com/in/ryan-soe-2596b6309/",
     },
     { name: "X", url: "https://x.com/ryansoee" },
+    {
+      name: "Goodreads",
+      url: "https://www.goodreads.com/user/show/185799909-ryan-soe",
+    },
+    {
+      name: "Letterboxd",
+      url: "https://letterboxd.com/ryansoe/",
+    },
   ],
 };
