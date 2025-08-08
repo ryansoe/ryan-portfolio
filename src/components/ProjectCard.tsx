@@ -11,60 +11,85 @@ export default function ProjectCard({
   githubUrl,
 }: Project) {
   return (
-    <div className="group p-6 rounded-lg transition-all duration-200 bg-white">
-      <div className="flex gap-6">
-        {/* Left side - Image */}
-        <div className="flex-shrink-0">
-          <div className="w-32 h-24 border-2 border-black overflow-hidden bg-gray-50 flex items-center justify-center">
-            <Image
-              src={imageUrl}
-              alt={title}
-              width={96}
-              height={96}
-              className="w-full h-full object-cover"
-            />
-          </div>
+    <div className="group p-6 transition-all duration-200 bg-white hover:shadow-lg">
+      <div className="flex flex-col md:flex-row items-start gap-6">
+        {/* Left side - Image (clickable if projectUrl exists) */}
+        <div className="w-full md:w-auto">
+          {projectUrl ? (
+            <a
+              href={projectUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <div className="w-full h-44 sm:h-52 md:w-56 md:h-36 overflow-hidden bg-gray-50 rounded-md shadow-sm">
+                <Image
+                  src={imageUrl}
+                  alt={title}
+                  width={224}
+                  height={144}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </a>
+          ) : (
+            <div className="w-full h-44 sm:h-52 md:w-56 md:h-36 overflow-hidden bg-gray-50 rounded-md shadow-sm">
+              <Image
+                src={imageUrl}
+                alt={title}
+                width={224}
+                height={144}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          )}
         </div>
 
         {/* Right side - Content */}
         <div className="flex-1 space-y-3">
           {/* Title and Date */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-baseline gap-3 flex-wrap">
             <h3 className="text-xl font-semibold text-black">{title}</h3>
-            <span className="text-gray-600 text-sm">{date}</span>
+            <span className="text-sm text-gray-400">{date}</span>
           </div>
 
           {/* Tags */}
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             {Array.isArray(tags) ? (
               tags.map((tag, index) => (
                 <span
                   key={index}
-                  className="px-3 py-1 bg-black text-white text-xs rounded-full border border-black"
+                  className="px-2.5 py-0.5 bg-black text-white text-xs rounded-full"
                 >
                   {tag}
                 </span>
               ))
             ) : (
-              <span className="px-3 py-1 bg-black text-white text-xs rounded-full border border-black">
+              <span className="px-2.5 py-0.5 bg-black text-white text-xs rounded-full">
                 {tags}
               </span>
             )}
           </div>
 
           {/* Description */}
-          <p className="text-gray-700 text-sm leading-relaxed">{desc}</p>
+          <p className="text-gray-700 text-base leading-relaxed">{desc}</p>
 
           {/* Links */}
-          <div className="flex gap-4 pt-2">
+          <div className="flex items-center gap-6 pt-3">
             {projectUrl && (
               <a
                 href={projectUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black font-medium text-sm hover:underline flex items-center gap-1"
+                className="group inline-flex items-center gap-1 text-sm font-medium text-black hover:underline"
               >
-                Explore →
+                Explore{" "}
+                <span
+                  aria-hidden
+                  className="transition-transform duration-200 group-hover:translate-x-0.5"
+                >
+                  →
+                </span>
               </a>
             )}
             {githubUrl && (
@@ -72,9 +97,15 @@ export default function ProjectCard({
                 href={githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black font-medium text-sm hover:underline flex items-center gap-1"
+                className="group inline-flex items-center gap-1 text-sm font-medium text-black hover:underline"
               >
-                GitHub →
+                GitHub{" "}
+                <span
+                  aria-hidden
+                  className="transition-transform duration-200 group-hover:translate-x-0.5"
+                >
+                  →
+                </span>
               </a>
             )}
           </div>

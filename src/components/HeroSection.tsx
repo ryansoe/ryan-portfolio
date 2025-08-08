@@ -1,20 +1,26 @@
 import { personalInfo } from "@/presets/personal";
 
 const HeroSection = () => (
-  <section className="my-10 px-4">
+  <section className="my-16 px-4">
     <div className="max-w-[66.67%] mx-auto text-center">
-      <h1 className="text-4xl font-bold mb-4">{personalInfo.name}</h1>
-      <p className="text-xl text-gray-600 mb-4">{personalInfo.description}</p>
+      <h1 className="text-5xl font-extrabold mb-6 text-black">
+        {personalInfo.name}
+      </h1>
 
-      {/* Social Links */}
-      <div className="flex justify-center gap-4">
+      {/* Description - Lighter weight and muted color */}
+      <p className="text-xl font-light text-gray-500 mb-12 leading-relaxed">
+        {personalInfo.description}
+      </p>
+
+      {/* Social Links - Improved button design */}
+      <div className="flex justify-center gap-6">
         {personalInfo.links.map((link, index) => (
           <a
             key={index}
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 border-2 border-black bg-white hover:bg-black hover:text-white transition-colors duration-200 rounded"
+            className="px-6 py-3 bg-white focus:bg-black focus:text-white transition-all duration-200 rounded-md font-medium text-sm uppercase tracking-wider"
           >
             {link.name}
           </a>
