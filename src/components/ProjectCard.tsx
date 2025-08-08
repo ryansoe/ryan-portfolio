@@ -11,7 +11,7 @@ export default function ProjectCard({
   githubUrl,
 }: Project) {
   return (
-    <div className="group p-6 transition-all duration-200 bg-white hover:shadow-lg">
+    <div className="group p-6 transition-all duration-200 bg-white hover:bg-gray-50 hover:shadow-sm">
       <div className="flex flex-col md:flex-row items-start gap-6">
         {/* Left side - Image (clickable if projectUrl exists) */}
         <div className="w-full md:w-auto">
@@ -22,24 +22,28 @@ export default function ProjectCard({
               rel="noopener noreferrer"
               className="block"
             >
-              <div className="w-full h-44 sm:h-52 md:w-56 md:h-36 overflow-hidden bg-gray-50 shadow-sm">
+              <div className="relative w-full h-44 sm:h-52 md:w-56 md:h-36 overflow-hidden bg-gray-50 shadow-sm group/image">
                 <Image
                   src={imageUrl}
                   alt={title}
                   width={224}
                   height={144}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-all duration-300 group-hover/image:brightness-75"
                 />
+                {/* Arrow icon for projects with links */}
+                <div className="absolute top-2 right-2 opacity-0 group-hover/image:opacity-100 transition-opacity duration-300">
+                  <span className="text-white text-xl font-bold">↗</span>
+                </div>
               </div>
             </a>
           ) : (
-            <div className="w-full h-44 sm:h-52 md:w-56 md:h-36 overflow-hidden bg-gray-50 shadow-sm">
+            <div className="relative w-full h-44 sm:h-52 md:w-56 md:h-36 overflow-hidden bg-gray-50 shadow-sm group/image">
               <Image
                 src={imageUrl}
                 alt={title}
                 width={224}
                 height={144}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-all duration-300 group-hover/image:brightness-75"
               />
             </div>
           )}

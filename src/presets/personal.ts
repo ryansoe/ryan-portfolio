@@ -16,11 +16,11 @@ export const personalInfo: PersonalInfo = {
   title: "Full Stack Developer",
   description: "Passionate developer building modern web applications",
   links: [
-    { name: "GitHub", url: "https://github.com/ryansoe" },
     {
       name: "LinkedIn",
       url: "https://www.linkedin.com/in/ryan-soe-2596b6309/",
     },
+    { name: "GitHub", url: "https://github.com/ryansoe" },
     { name: "X", url: "https://x.com/ryansoee" },
     {
       name: "Goodreads",

@@ -11,7 +11,6 @@ const HeroSection = () => (
         {personalInfo.description}
       </p>
 
-      {/* Social Links - Improved button design */}
       <div className="flex justify-start gap-6">
         {personalInfo.links.map((link, index) => (
           <a
