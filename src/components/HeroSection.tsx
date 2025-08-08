@@ -1,4 +1,5 @@
 import { personalInfo } from "@/presets/personal";
+import { useEffect, useRef, useState } from "react";
 
 const HeroSection = () => {
   const linkClassName = [
@@ -8,6 +9,36 @@ const HeroSection = () => {
     "after:transition-[width] after:duration-200",
     "hover:after:w-full focus-visible:after:w-full",
   ].join(" ");
+
+  const [activeLinkIndex, setActiveLinkIndex] = useState<number | null>(null);
+  const activeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleTouchStart = (index: number) => {
+    if (activeTimeoutRef.current) {
+      clearTimeout(activeTimeoutRef.current);
+    }
+    setActiveLinkIndex(index);
+    activeTimeoutRef.current = setTimeout(() => {
+      setActiveLinkIndex(null);
+      activeTimeoutRef.current = null;
+    }, 150);
+  };
+
+  const handleTouchEnd = () => {
+    if (activeTimeoutRef.current) {
+      clearTimeout(activeTimeoutRef.current);
+      activeTimeoutRef.current = null;
+    }
+    setActiveLinkIndex(null);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (activeTimeoutRef.current) {
+        clearTimeout(activeTimeoutRef.current);
+      }
+    };
+  }, []);
 
   return (
     <section className="my-16 px-4">
@@ -27,7 +58,12 @@ const HeroSection = () => {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={linkClassName}
+              onTouchStart={() => handleTouchStart(index)}
+              onTouchEnd={handleTouchEnd}
+              onTouchCancel={handleTouchEnd}
+              className={`${linkClassName} ${
+                activeLinkIndex === index ? "bg-gray-100" : ""
+              }`}
             >
               {link.name}
             </a>
