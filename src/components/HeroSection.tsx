@@ -20,7 +20,7 @@ const HeroSection = () => (
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 bg-white focus:bg-black focus:text-white transition-all duration-200 rounded-md font-medium text-sm uppercase tracking-wider"
+            className="px-6 py-3 bg-white transition-all duration-200 rounded-md font-medium text-sm uppercase tracking-wider"
           >
             {link.name}
           </a>
