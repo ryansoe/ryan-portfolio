@@ -31,5 +31,9 @@ export const personalInfo: PersonalInfo = {
       name: "Letterboxd",
       url: "https://letterboxd.com/ryansoe/",
     },
+    {
+      name: "Spotify",
+      url: "https://open.spotify.com/user/moonsetter03?si=e275e39520024c21",
+    },
   ],
 };
