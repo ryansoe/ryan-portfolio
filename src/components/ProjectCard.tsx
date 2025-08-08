@@ -63,13 +63,13 @@ export default function ProjectCard({
               tags.map((tag, index) => (
                 <span
                   key={index}
-                  className="px-2.5 py-0.5 bg-gray-200 text-black text-xs font-medium rounded-full"
+                  className="px-2.5 py-0.5 bg-gray-200 text-black text-xs font-medium rounded-sm"
                 >
                   {tag}
                 </span>
               ))
             ) : (
-              <span className="px-2.5 py-0.5 bg-gray-200 text-black text-xs font-semibold rounded-full">
+              <span className="px-2.5 py-0.5 bg-gray-200 text-black text-xs font-semibold rounded-sm">
                 {tags}
               </span>
             )}
