@@ -49,7 +49,7 @@ export default function ProjectCard({
         <div className="flex-1 space-y-3">
           {/* Title and Date */}
           <div className="flex items-baseline gap-3 flex-wrap">
-            <h3 className="text-xl font-semibold text-black">{title}</h3>
+            <h3 className="text-lg font-semibold text-black">{title}</h3>
             <span className="text-sm text-gray-400">{date}</span>
           </div>
 
@@ -59,7 +59,7 @@ export default function ProjectCard({
               tags.map((tag, index) => (
                 <span
                   key={index}
-                  className="px-2.5 py-0.5 bg-gray-200 text-black text-xs font-semibold rounded-full"
+                  className="px-2.5 py-0.5 bg-gray-200 text-black text-xs font-medium rounded-full"
                 >
                   {tag}
                 </span>
@@ -88,7 +88,7 @@ export default function ProjectCard({
                   aria-hidden
                   className="transition-transform duration-200 group-hover:translate-x-0.5"
                 >
-                  →
+                  ↗
                 </span>
               </a>
             )}
@@ -104,7 +104,7 @@ export default function ProjectCard({
                   aria-hidden
                   className="transition-transform duration-200 group-hover:translate-x-0.5"
                 >
-                  →
+                  ↗
                 </span>
               </a>
             )}

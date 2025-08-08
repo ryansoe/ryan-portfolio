@@ -5,19 +5,17 @@ body {
   @apply bg-white text-black font-sans antialiased;
 }
 
+h2,
+h3,
 h4,
 h5,
 h6 {
   @apply font-medium text-black;
 }
 
-h3 {
-  @apply font-bold text-black;
-}
-
-a {
+/* a {
   @apply text-black underline hover:text-gray-600 transition-colors;
-}
+} */
 
 input,
 textarea {
