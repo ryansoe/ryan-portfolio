@@ -11,6 +11,16 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 6,
+    title: "In-N-Out Nutrition Calculator",
+    date: "August 2025",
+    desc: "Quickly explore In-N-Out menu nutrition. Add items to your tray to see live totals for calories, macros, sodium and more. Use the summary at the bottom to adjust quantities or reset.",
+    tags: ["Web", "Health", "Personal"],
+    imageUrl: "/projects/innout.png",
+    projectUrl: "https://in-n-out-nutrition.vercel.app/",
+    githubUrl: "https://github.com/ryansoe/innout-nutrition-calculator",
+  },
+  {
     id: 1,
     title: "Vibely",
     date: "July 2025",
