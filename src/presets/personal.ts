@@ -14,8 +14,7 @@ export interface SocialLink {
 export const personalInfo: PersonalInfo = {
   name: "Ryan Soe",
   title: "Full Stack Developer",
-  description:
-    "Exploring my hobbies and interests through software development",
+  description: "Full-stack developer building user-first software",
   links: [
     {
       name: "LinkedIn",
