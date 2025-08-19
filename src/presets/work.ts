@@ -11,6 +11,15 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 1,
+    title: "Formula 1 Race Outcome Predictor",
+    date: "August 2025",
+    desc: "Every week, I use a gradient boosting machine learning model to predict Formula 1 race outcomes.",
+    tags: ["AI", "Sports", "Personal"],
+    imageUrl: "/projects/f1.png",
+    githubUrl: "https://github.com/ryansoe/f1_predictions_2025",
+  },
+  {
     id: 6,
     title: "In-N-Out Nutrition Calculator",
     date: "August 2025",
@@ -65,7 +74,7 @@ export const projects: Project[] = [
     title: "RICE (Ryan's Insane Chess Engine)",
     date: "May 2024",
     desc: "A not-so insane chess engine",
-    tags: ["Tool", "Chess", "Personal"],
+    tags: ["AI", "Chess", "Personal"],
     imageUrl: "/projects/rice.png",
     githubUrl: "https://github.com/ryansoe/rice",
   },
