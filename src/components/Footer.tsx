@@ -20,7 +20,10 @@ const Footer = () => {
                   CONTACT ME{" "}
                   <span
                     className="text-lg"
-                    style={{ fontVariantEmoji: "text" }}
+                    style={{
+                      fontFamily: "monospace",
+                      fontVariantEmoji: "text",
+                    }}
                   >
                     ✉
                   </span>
@@ -41,7 +44,15 @@ const Footer = () => {
                   className="hover:underline transition-all duration-200"
                 >
                   VERSION 2.0{" "}
-                  <span style={{ fontVariantEmoji: "text" }}>↗</span>
+                  <span
+                    style={{
+                      fontFamily: "monospace",
+                      fontVariantEmoji: "text",
+                      fontSize: "1rem",
+                    }}
+                  >
+                    ↗
+                  </span>
                 </a>
               </div>
             </div>
