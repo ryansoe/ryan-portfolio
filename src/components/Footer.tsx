@@ -17,7 +17,7 @@ const Footer = () => {
                   href="mailto:ryansoe26@gmail.com"
                   className="hover:underline transition-all duration-200"
                 >
-                  CONTACT ME
+                  CONTACT ME <span className="text-lg">✉</span>
                 </a>
               </div>
 
@@ -34,7 +34,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="hover:underline transition-all duration-200"
                 >
-                  VERSION 2.0
+                  VERSION 2.0 ↗
                 </a>
               </div>
             </div>
