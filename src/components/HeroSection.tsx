@@ -51,7 +51,7 @@ const HeroSection = () => {
           {personalInfo.description}
         </p>
 
-        <div className="flex flex-col sm:flex-row justify-start gap-4 sm:gap-6 font-roboto-mono">
+        <div className="flex flex-row justify-start gap-3 sm:gap-6 font-roboto-mono">
           {personalInfo.links.map((link, index) => (
             <a
               key={index}
