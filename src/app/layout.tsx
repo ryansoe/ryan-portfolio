@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, DM_Serif_Text } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  DM_Serif_Text,
+  Roboto_Mono,
+} from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -18,6 +23,12 @@ const dmSerifText = DM_Serif_Text({
   weight: ["400"],
 });
 
+const robotoMono = Roboto_Mono({
+  variable: "--font-roboto-mono",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+});
+
 export const metadata: Metadata = {
   title: "Ryan Soe",
   description: "My personal website",
@@ -31,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${dmSerifText.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${dmSerifText.variable} ${robotoMono.variable} antialiased`}
       >
         {children}
       </body>

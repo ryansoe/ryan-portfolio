@@ -54,7 +54,9 @@ export default function ProjectCard({
           {/* Title and Date */}
           <div className="flex items-baseline gap-3 flex-wrap">
             <h3 className="text-lg font-semibold text-black">{title}</h3>
-            <span className="text-sm text-gray-400">{date}</span>
+            <span className="text-sm text-gray-400 font-roboto-mono">
+              {date}
+            </span>
           </div>
 
           {/* Tags */}
@@ -63,20 +65,22 @@ export default function ProjectCard({
               tags.map((tag, index) => (
                 <span
                   key={index}
-                  className="px-2.5 py-0.5 bg-gray-200 text-black text-xs font-medium rounded-sm"
+                  className="px-2.5 py-0.5 bg-gray-200 text-black text-xs font-medium rounded-md font-roboto-mono uppercase"
                 >
                   {tag}
                 </span>
               ))
             ) : (
-              <span className="px-2.5 py-0.5 bg-gray-200 text-black text-xs font-semibold rounded-sm">
+              <span className="px-2.5 py-0.5 bg-gray-200 text-black text-xs font-medium rounded-md font-roboto-mono uppercase">
                 {tags}
               </span>
             )}
           </div>
 
           {/* Description */}
-          <p className="text-gray-700 text-base leading-relaxed">{desc}</p>
+          <p className="text-gray-700 text-sm leading-relaxed font-roboto-mono">
+            {desc}
+          </p>
 
           {/* Links */}
           <div className="flex items-center gap-6 pt-3">
@@ -85,7 +89,7 @@ export default function ProjectCard({
                 href={projectUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative inline-flex items-center gap-1 text-sm font-medium text-black after:absolute after:left-0 after:-bottom-[2px] after:h-[1px] after:w-0 after:bg-black after:transition-[width] after:duration-200 hover:after:w-full focus-visible:after:w-full sm:focus:underline"
+                className="group relative inline-flex items-center gap-1 text-sm font-medium text-black after:absolute after:left-0 after:-bottom-[2px] after:h-[1px] after:w-0 after:bg-black after:transition-[width] after:duration-200 hover:after:w-full focus-visible:after:w-full sm:focus:underline font-roboto-mono"
               >
                 Explore{" "}
                 <span
@@ -101,7 +105,7 @@ export default function ProjectCard({
                 href={githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative inline-flex items-center gap-1 text-sm font-medium text-black after:absolute after:left-0 after:-bottom-[2px] after:h-[1px] after:w-0 after:bg-black after:transition-[width] after:duration-200 hover:after:w-full focus-visible:after:w-full sm:focus:underline"
+                className="group relative inline-flex items-center gap-1 text-sm font-medium text-black after:absolute after:left-0 after:-bottom-[2px] after:h-[1px] after:w-0 after:bg-black after:transition-[width] after:duration-200 hover:after:w-full focus-visible:after:w-full sm:focus:underline font-roboto-mono"
               >
                 GitHub{" "}
                 <span

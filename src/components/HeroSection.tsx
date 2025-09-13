@@ -47,7 +47,7 @@ const HeroSection = () => {
           {personalInfo.name}
         </h1>
 
-        <p className="text-xl font-light text-black mb-6 leading-relaxed">
+        <p className="text-xl font-medium text-black mb-6 leading-relaxed">
           {personalInfo.description}
         </p>
 

@@ -27,6 +27,16 @@ h3 {
   @apply text-2xl md:text-3xl font-bold;
 }
 
+/* DM Serif Text utility class */
+.font-dm-serif {
+  font-family: var(--font-dm-serif);
+}
+
+/* Roboto Mono utility class */
+.font-roboto-mono {
+  font-family: var(--font-roboto-mono);
+}
+
 /* a {
   @apply text-black underline hover:text-gray-600 transition-colors;
 } */
