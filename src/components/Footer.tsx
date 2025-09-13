@@ -13,7 +13,12 @@ const Footer = () => {
             <div className="flex justify-between md:justify-between items-center px-20 md:px-0">
               {/* Left - Contact */}
               <div>
-                <span>CONTACT ME</span>
+                <a
+                  href="mailto:ryansoe26@gmail.com"
+                  className="hover:underline transition-all duration-200"
+                >
+                  CONTACT ME
+                </a>
               </div>
 
               {/* Center - Designed and Built (desktop only) */}
@@ -23,7 +28,14 @@ const Footer = () => {
 
               {/* Right - Version */}
               <div>
-                <span>VERSION 2.0</span>
+                <a
+                  href="https://github.com/ryansoe/ryan-portfolio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline transition-all duration-200"
+                >
+                  VERSION 2.0
+                </a>
               </div>
             </div>
           </div>
