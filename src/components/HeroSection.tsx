@@ -41,7 +41,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="!pt-12 !md:pt-16 px-4">
+    <section className="!mt-10 !md:mt-16 px-4">
       <div className="max-w-full sm:max-w-[95%] lg:max-w-[66.67%] mx-auto text-left">
         <h1 className="font-medium mb-2 text-black">{personalInfo.name}</h1>
 
