@@ -43,7 +43,7 @@ const HeroSection = () => {
   return (
     <section className="my-12 px-4">
       <div className="max-w-full sm:max-w-[95%] lg:max-w-[66.67%] mx-auto text-left">
-        <h1 className="text-6xl sm:text-5xl font-medium mb-2 text-black">
+        <h1 className="text-8xl sm:text-5xl font-medium mb-2 text-black">
           {personalInfo.name}
         </h1>
 
