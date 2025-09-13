@@ -17,7 +17,13 @@ const Footer = () => {
                   href="mailto:ryansoe26@gmail.com"
                   className="hover:underline transition-all duration-200"
                 >
-                  CONTACT ME <span className="text-lg">✉</span>
+                  CONTACT ME{" "}
+                  <span
+                    className="text-lg"
+                    style={{ fontVariantEmoji: "text" }}
+                  >
+                    ✉
+                  </span>
                 </a>
               </div>
 
@@ -34,7 +40,8 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="hover:underline transition-all duration-200"
                 >
-                  VERSION 2.0 ↗
+                  VERSION 2.0{" "}
+                  <span style={{ fontVariantEmoji: "text" }}>↗</span>
                 </a>
               </div>
             </div>
