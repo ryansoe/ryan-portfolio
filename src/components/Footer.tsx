@@ -43,7 +43,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="hover:underline transition-all duration-200"
                 >
-                  VERSION 2.0{" "}
+                  VERSION 2.1{" "}
                   <span
                     style={{
                       fontFamily: "monospace",
