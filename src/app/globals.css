@@ -16,7 +16,7 @@ h6 {
 }
 
 h1 {
-  @apply text-5xl md:text-6xl font-black leading-tight;
+  @apply text-4xl md:text-5xl font-black leading-tight;
 }
 
 h2 {
