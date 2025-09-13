@@ -11,7 +11,19 @@ export default function ProjectCard({
   githubUrl,
 }: Project) {
   return (
-    <div className="group p-6 transition-all duration-200 bg-white hover:bg-gray-50 hover:shadow-sm">
+    <div
+      className="group p-6 transition-all duration-300 bg-white border-2 border-black rounded-lg hover:transform hover:-translate-y-2"
+      style={{ boxShadow: "none" }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.boxShadow = "8px 8px 0px #000000";
+        e.currentTarget.style.background =
+          "linear-gradient(135deg, #f472b6 0%, #fb923c 33%, #ffffff 66%, #60a5fa 100%)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.boxShadow = "none";
+        e.currentTarget.style.background = "white";
+      }}
+    >
       <div className="flex flex-col md:flex-row items-start gap-6">
         {/* Left side - Image (clickable if projectUrl exists) */}
         <div className="w-full md:w-auto">
@@ -78,7 +90,7 @@ export default function ProjectCard({
           </div>
 
           {/* Description */}
-          <p className="text-gray-700 text-sm leading-relaxed font-roboto-mono">
+          <p className="text-gray-900 text-sm leading-relaxed font-roboto-mono">
             {desc}
           </p>
 
