@@ -9,6 +9,31 @@ export interface Project {
   githubUrl?: string;
 }
 
+export interface Work {
+  id: number;
+  company: string;
+  date: string;
+  type: string;
+  imageUrl: string;
+}
+
+export const work: Work[] = [
+  {
+    id: 1,
+    company: "The Great Game",
+    date: "2025 - Present",
+    type: "Internship",
+    imageUrl: "/work/tgg.jpeg",
+  },
+  {
+    id: 2,
+    company: "Data Science Alliance",
+    date: "2025 - Present",
+    type: "Internship",
+    imageUrl: "/work/dsa.jpeg",
+  },
+];
+
 export const projects: Project[] = [
   {
     id: 1,
