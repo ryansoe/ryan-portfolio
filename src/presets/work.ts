@@ -19,18 +19,18 @@ export interface Work {
 
 export const work: Work[] = [
   {
-    id: 1,
-    company: "The Great Game",
-    date: "2025 - Present",
-    type: "Internship",
-    imageUrl: "/work/tgg.jpeg",
-  },
-  {
     id: 2,
     company: "Data Science Alliance",
     date: "2025 - Present",
     type: "Internship",
     imageUrl: "/work/dsa.jpeg",
+  },
+  {
+    id: 1,
+    company: "The Great Game",
+    date: "2025 - Present",
+    type: "Internship",
+    imageUrl: "/work/tgg.jpeg",
   },
 ];
 
