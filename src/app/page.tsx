@@ -2,6 +2,7 @@
 
 import HeroSection from "@/components/HeroSection";
 import ProjectSection from "@/components/ProjectSection";
+import Footer from "@/components/Footer";
 import { useState } from "react";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
     <div>
       <HeroSection />
       <ProjectSection />
+      <Footer />
     </div>
   );
 }
