@@ -20,7 +20,7 @@ const WorkSection = () => (
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
-                <h4 className="text-md sm:text-lg font-medium text-black">
+                <h4 className="text-sm sm:text-lg font-medium text-black">
                   {workItem.company}
                 </h4>
                 <span className="text-xs sm:text-xs text-gray-400 font-roboto-mono whitespace-nowrap">

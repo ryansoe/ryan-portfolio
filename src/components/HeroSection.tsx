@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 const HeroSection = () => {
   const linkClassName = [
     "group relative inline-flex items-center gap-1",
-    "no-underline font-medium text-sm uppercase tracking-wide text-black leading-none",
+    "no-underline font-medium text-xs sm:text-sm uppercase tracking-wide text-black leading-none",
     "after:absolute after:left-0 after:-bottom-[1px] after:h-[1px] after:w-0 after:bg-black",
     "after:transition-[width] after:duration-200",
     "hover:after:w-full focus-visible:after:w-full",
