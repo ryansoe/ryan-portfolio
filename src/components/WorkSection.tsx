@@ -14,7 +14,7 @@ const WorkSection = () => (
         />
         <h2 className="text-2xl font-bold">Experience</h2>
       </div>
-      <div className="bg-white border-2 border-black p-4">
+      <div className="bg-white border-2 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
         {work.map((workItem, index) => (
           <div key={workItem.id}>
             <div className="flex items-center py-2">
