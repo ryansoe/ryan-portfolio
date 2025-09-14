@@ -4,7 +4,16 @@ import Image from "next/image";
 const WorkSection = () => (
   <section className="my-16 px-4">
     <div className="max-w-full sm:max-w-[95%] lg:max-w-[50%] mx-auto">
-      <h2 className="text-2xl font-bold mb-5 text-center">Experience</h2>
+      <div className="flex items-center justify-center gap-2 mb-5">
+        <Image
+          src="/icons/work.svg"
+          alt="Work icon"
+          width={24}
+          height={24}
+          className="w-10 h-10"
+        />
+        <h2 className="text-2xl font-bold">Experience</h2>
+      </div>
       <div className="bg-white border-2 border-black p-4">
         {work.map((workItem, index) => (
           <div key={workItem.id}>
