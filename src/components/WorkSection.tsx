@@ -5,7 +5,10 @@ const WorkSection = () => {
   const sortedWork = [...work].sort((a, b) => b.id - a.id);
 
   return (
-    <section className="my-16 px-4">
+    <section
+      className="my-16 px-4 page-load-animate"
+      style={{ animationDelay: "200ms" }}
+    >
       <div className="max-w-full sm:max-w-[95%] lg:max-w-[50%] mx-auto">
         <div className="flex items-center justify-center gap-2 mb-5">
           <Image

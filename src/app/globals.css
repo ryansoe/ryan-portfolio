@@ -54,6 +54,23 @@ section {
   @apply mb-16;
 }
 
+/* Page load fade-in animation for all elements */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-load-animate {
+  animation: fadeInUp 0.5s ease-out forwards;
+  opacity: 0;
+}
+
 /* Scroll-triggered fade-in animation for project cards */
 .project-card-animate {
   opacity: 0;
