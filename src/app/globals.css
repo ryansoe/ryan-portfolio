@@ -53,3 +53,19 @@ button {
 section {
   @apply mb-16;
 }
+
+/* Scroll-triggered fade-in animation for project cards */
+.project-card-animate {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(30px);
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card-animate.project-card-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}

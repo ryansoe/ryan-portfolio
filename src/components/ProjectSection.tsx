@@ -1,6 +1,6 @@
 // components/ProjectSection.tsx
 import { projects } from "@/presets/work";
-import ProjectCard from "./ProjectCard";
+import AnimatedProjectCard from "./AnimatedProjectCard";
 import Image from "next/image";
 
 const ProjectSection = () => {
@@ -20,8 +20,8 @@ const ProjectSection = () => {
           <h2 className="text-2xl font-bold">Projects</h2>
         </div>
         <div className="space-y-5">
-          {sortedProjects.map((project) => (
-            <ProjectCard key={project.id} {...project} />
+          {sortedProjects.map((project, index) => (
+            <AnimatedProjectCard key={project.id} index={index} {...project} />
           ))}
         </div>
       </div>
