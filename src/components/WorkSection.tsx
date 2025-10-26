@@ -5,12 +5,12 @@ const WorkSection = () => {
   const sortedWork = [...work].sort((a, b) => b.id - a.id);
 
   return (
-    <section
-      className="my-16 px-4 page-load-animate"
-      style={{ animationDelay: "200ms" }}
-    >
+    <section className="my-16 px-4">
       <div className="max-w-full sm:max-w-[95%] lg:max-w-[50%] mx-auto">
-        <div className="flex items-center justify-center gap-2 mb-5">
+        <div
+          className="flex items-center justify-center gap-2 mb-5 page-load-animate"
+          style={{ animationDelay: "200ms" }}
+        >
           <Image
             src="/icons/work.svg"
             alt="Work icon"
@@ -20,7 +20,10 @@ const WorkSection = () => {
           />
           <h2 className="text-2xl font-bold">Experience</h2>
         </div>
-        <div className="bg-white border-2 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+        <div
+          className="bg-white border-2 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] pop-out-animate"
+          style={{ animationDelay: "300ms" }}
+        >
           {sortedWork.map((workItem, index) => (
             <div key={workItem.id}>
               <div className="flex items-center py-2">
