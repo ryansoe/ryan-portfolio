@@ -4,7 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import WorkSection from "@/components/WorkSection";
 import ProjectSection from "@/components/ProjectSection";
 import Footer from "@/components/Footer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -12,6 +12,11 @@ export default function Home() {
     email: "",
     message: "",
   });
+
+  // Always scroll to top when page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
