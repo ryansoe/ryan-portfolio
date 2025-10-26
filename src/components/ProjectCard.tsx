@@ -34,7 +34,7 @@ export default function ProjectCard({
               rel="noopener noreferrer"
               className="block"
             >
-              <div className="relative w-full h-44 sm:h-52 md:w-56 md:h-36 overflow-hidden bg-gray-50 shadow-sm group/image">
+              <div className="relative w-full h-44 sm:h-52 md:w-56 md:h-36 overflow-hidden bg-gray-50 shadow-sm group/image rounded-lg">
                 <Image
                   src={imageUrl}
                   alt={title}
@@ -49,7 +49,7 @@ export default function ProjectCard({
               </div>
             </a>
           ) : (
-            <div className="relative w-full h-44 sm:h-52 md:w-56 md:h-36 overflow-hidden bg-gray-50 shadow-sm group/image">
+            <div className="relative w-full h-44 sm:h-52 md:w-56 md:h-36 overflow-hidden bg-gray-50 shadow-sm group/image rounded-lg">
               <Image
                 src={imageUrl}
                 alt={title}
