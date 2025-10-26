@@ -1,8 +1,45 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
 const Footer = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const footerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            // Once visible, stop observing
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.2, // Trigger when 20% of the footer is visible
+        rootMargin: "0px",
+      }
+    );
+
+    if (footerRef.current) {
+      observer.observe(footerRef.current);
+    }
+
+    return () => {
+      if (footerRef.current) {
+        observer.unobserve(footerRef.current);
+      }
+    };
+  }, []);
+
   return (
     <footer
-      className="w-full bg-white py-8 px-4 mt-20 page-load-animate"
-      style={{ animationDelay: "400ms" }}
+      ref={footerRef}
+      className={`w-full bg-white py-8 px-4 mt-20 project-card-animate ${
+        isVisible ? "project-card-visible" : ""
+      }`}
     >
       <div className="max-w-full sm:max-w-[95%] lg:max-w-[66.67%] mx-auto">
         <div className="border-t border-gray-300 pt-8">
