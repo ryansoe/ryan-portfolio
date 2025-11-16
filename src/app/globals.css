@@ -3,13 +3,7 @@
 /* Minimalist base styles */
 body {
   @apply text-black font-sans antialiased;
-  background: linear-gradient(
-    to bottom,
-    #80c0e1 0%,
-    #ffffff 15%,
-    #ffffff 92%,
-    #ee9ea8 100%
-  );
+  background: linear-gradient(to bottom, #80c0e1 0%, #ffffff 15%);
   min-height: 100vh;
 }
 

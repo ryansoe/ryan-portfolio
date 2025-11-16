@@ -21,7 +21,7 @@ export const work: Work[] = [
   {
     id: 1,
     company: "The Great Game",
-    date: "2025 - Present",
+    date: "2025 - 2025",
     type: "Internship",
     imageUrl: "/work/tgg.jpeg",
   },
