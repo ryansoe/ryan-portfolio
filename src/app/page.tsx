@@ -30,6 +30,7 @@ export default function Home() {
         className="pt-10 md:pt-16"
         style={{
           background: "linear-gradient(to bottom, #80c0e1 0%, #ffffff 100%)",
+          marginTop: 0,
         }}
       >
         <HeroSection />
