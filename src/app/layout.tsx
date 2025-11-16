@@ -32,14 +32,6 @@ const robotoMono = Roboto_Mono({
 export const metadata: Metadata = {
   title: "Ryan Soe",
   description: "My personal website",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-    userScalable: true,
-    viewportFit: "cover",
-  },
-  themeColor: "#80c0e1",
 };
 
 export default function RootLayout({
