@@ -68,7 +68,7 @@ export default function Home() {
       <div
         className="pt-10"
         style={{
-          background: "linear-gradient(to bottom, #ffffff 0%, #fbb4d4 100%)",
+          background: "#ffffff",
         }}
       >
         <Footer />
