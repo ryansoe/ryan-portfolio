@@ -32,6 +32,7 @@ const robotoMono = Roboto_Mono({
 export const metadata: Metadata = {
   title: "Ryan Soe",
   description: "My personal website",
+  themeColor: "#87CEEB",
 };
 
 export default function RootLayout({
