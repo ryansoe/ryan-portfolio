@@ -17,7 +17,7 @@ export default function ProjectCard({
       onMouseEnter={(e) => {
         e.currentTarget.style.boxShadow = "8px 8px 0px #000000";
         e.currentTarget.style.background =
-          "linear-gradient(135deg, #f472b6 0%, #fb923c 33%, #ffffff 66%, #60a5fa 100%)";
+          "linear-gradient(135deg, #f472b6 0%, #fb923c 33%, #fde68a 50%, #ffffff 66%, #60a5fa 100%)";
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.boxShadow = "none";
