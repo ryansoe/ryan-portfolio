@@ -38,12 +38,7 @@ export default function Home() {
         <WorkSection />
         <ProjectSection />
       </div>
-      <div
-        className="pt-10"
-        style={{
-          background: "linear-gradient(to bottom, #ffffff 0%, #fbb4d4 100%)",
-        }}
-      >
+      <div className="pt-10" style={{ backgroundColor: "#ffffff" }}>
         <Footer />
       </div>
     </div>
