@@ -26,10 +26,23 @@ export default function Home() {
 
   return (
     <div>
-      <HeroSection />
+      <div
+        className="pt-10 md:pt-16"
+        style={{
+          background: "linear-gradient(to bottom, #80c0e1 0%, #ffffff 100%)",
+        }}
+      >
+        <HeroSection />
+      </div>
       <WorkSection />
       <ProjectSection />
-      <Footer />
+      <div
+        style={{
+          background: "linear-gradient(to bottom, #ffffff 0%, #fbb4d4 100%)",
+        }}
+      >
+        <Footer />
+      </div>
     </div>
   );
 }

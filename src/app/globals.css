@@ -2,8 +2,7 @@
 
 /* Minimalist base styles */
 body {
-  @apply text-black font-sans antialiased;
-  background: linear-gradient(to bottom, #80c0e1 0%, #ffffff 15%);
+  @apply bg-white text-black font-sans antialiased;
   min-height: 100vh;
 }
 
