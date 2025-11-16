@@ -9,7 +9,7 @@ body {
 
 /* Minimalist base styles */
 body {
-  @apply bg-white text-black font-sans antialiased;
+  @apply text-black font-sans antialiased;
   min-height: 100vh;
 }
 

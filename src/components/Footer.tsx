@@ -37,7 +37,7 @@ const Footer = () => {
   return (
     <footer
       ref={footerRef}
-      className={`w-full bg-transparent py-8 px-4 mt-20 project-card-animate ${
+      className={`w-full bg-transparent py-8 px-4 project-card-animate ${
         isVisible ? "project-card-visible" : ""
       }`}
     >

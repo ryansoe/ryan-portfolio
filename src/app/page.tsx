@@ -27,16 +27,19 @@ export default function Home() {
   return (
     <div>
       <div
-        className="pt-10 md:pt-16"
+        className="pt-10 md:pt-16 pb-16"
         style={{
           background: "linear-gradient(to bottom, #80c0e1 0%, #ffffff 100%)",
         }}
       >
         <HeroSection />
       </div>
-      <WorkSection />
-      <ProjectSection />
+      <div style={{ backgroundColor: "#ffffff" }} className="pt-0 pb-16">
+        <WorkSection />
+        <ProjectSection />
+      </div>
       <div
+        className="pt-10"
         style={{
           background: "linear-gradient(to bottom, #ffffff 0%, #fbb4d4 100%)",
         }}
