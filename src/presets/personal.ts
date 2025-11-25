@@ -27,10 +27,6 @@ export const personalInfo: PersonalInfo = {
       url: "https://www.goodreads.com/user/show/185799909-ryan-soe",
     },
     {
-      name: "Letterboxd",
-      url: "https://letterboxd.com/ryansoe/",
-    },
-    {
       name: "Spotify",
       url: "https://open.spotify.com/user/moonsetter03?si=e275e39520024c21",
     },
