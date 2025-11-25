@@ -121,3 +121,24 @@ section {
   filter: blur(0);
   transform: translateY(0);
 }
+
+/* Custom underline effect that appears left-to-right and disappears left-to-right */
+.underline-lr::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 100%;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.2s ease;
+}
+
+.underline-lr:hover::after,
+.underline-lr:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left center;
+  transition: transform 0.2s ease;
+}

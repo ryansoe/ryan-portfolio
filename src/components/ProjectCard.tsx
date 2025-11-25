@@ -101,7 +101,7 @@ export default function ProjectCard({
                 href={projectUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative inline-flex items-center gap-1 text-sm font-medium text-black after:absolute after:left-0 after:-bottom-[2px] after:h-[1px] after:w-0 after:bg-black after:transition-[width] after:duration-200 hover:after:w-full font-roboto-mono"
+                className="group relative inline-flex items-center gap-1 text-sm font-medium text-black underline-lr font-roboto-mono"
               >
                 Explore{" "}
                 <span
@@ -117,7 +117,7 @@ export default function ProjectCard({
                 href={githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative inline-flex items-center gap-1 text-sm font-medium text-black after:absolute after:left-0 after:-bottom-[2px] after:h-[1px] after:w-0 after:bg-black after:transition-[width] after:duration-200 hover:after:w-full font-roboto-mono"
+                className="group relative inline-flex items-center gap-1 text-sm font-medium text-black underline-lr font-roboto-mono"
               >
                 GitHub{" "}
                 <span
