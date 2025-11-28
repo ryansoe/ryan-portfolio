@@ -8,7 +8,7 @@ const ProjectSection = () => {
 
   return (
     <section
-      className="mb-0 px-4 page-load-animate"
+      className="mb-0 px-4 pb-16 bg-white page-load-animate"
       style={{ animationDelay: "300ms" }}
     >
       <div className="max-w-full sm:max-w-[95%] lg:max-w-[66.67%] mx-auto">

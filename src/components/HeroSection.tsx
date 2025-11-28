@@ -39,7 +39,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="px-4 page-load-animate">
+    <section className="px-4 pt-8 md:pt-12 pb-8 bg-white page-load-animate">
       <div className="max-w-full sm:max-w-[95%] lg:max-w-[66.67%] mx-auto text-left">
         <h1 className="font-medium mb-2 text-black">{personalInfo.name}</h1>
 

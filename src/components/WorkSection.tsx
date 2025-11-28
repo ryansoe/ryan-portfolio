@@ -5,8 +5,8 @@ const WorkSection = () => {
   const sortedWork = [...work].sort((a, b) => b.id - a.id);
 
   return (
-    <section className="mb-16 px-4">
-      <div className="max-w-full sm:max-w-[95%] lg:max-w-[50%] mx-auto">
+    <section className="mb-16 px-4 bg-white">
+      <div className="max-w-full sm:max-w-[95%] lg:max-w-[60%] mx-auto">
         <div
           className="flex items-center justify-center gap-2 mb-5 page-load-animate"
           style={{ animationDelay: "200ms" }}
@@ -41,7 +41,7 @@ const WorkSection = () => {
                   <h4 className="text-sm sm:text-lg font-medium text-black">
                     {workItem.company}
                   </h4>
-                  <span className="text-[10px] sm:text-xs text-gray-400 font-roboto-mono whitespace-nowrap">
+                  <span className="text-[12px] sm:text-sm text-gray-400 font-roboto-mono whitespace-nowrap">
                     {workItem.date}
                   </span>
                 </div>

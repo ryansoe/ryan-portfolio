@@ -65,7 +65,9 @@ export default function ProjectCard({
         <div className="flex-1 space-y-3">
           {/* Title and Date */}
           <div className="flex items-baseline gap-3 flex-wrap">
-            <h3 className="text-lg font-semibold text-black">{title}</h3>
+            <h3 className="text-2xl md:text-2xl font-semibold text-black">
+              {title}
+            </h3>
             <span className="text-sm text-gray-400 font-roboto-mono">
               {date}
             </span>

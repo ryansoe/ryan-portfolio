@@ -31,28 +31,11 @@ export default function Home() {
   };
 
   return (
-    <div>
-      <div
-        ref={heroRef}
-        className="pt-10 md:pt-16 pb-16"
-        style={{
-          backgroundColor: "#ffffff",
-        }}
-      >
-        <HeroSection />
-      </div>
-      <div style={{ backgroundColor: "#ffffff" }} className="pt-0 pb-16">
-        <WorkSection />
-        <ProjectSection />
-      </div>
-      <div
-        className="pt-10"
-        style={{
-          backgroundColor: "#ffffff",
-        }}
-      >
-        <Footer />
-      </div>
+    <div ref={heroRef}>
+      <HeroSection />
+      <WorkSection />
+      <ProjectSection />
+      <Footer />
     </div>
   );
 }
