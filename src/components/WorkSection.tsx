@@ -41,7 +41,7 @@ const WorkSection = () => {
                   <h4 className="text-sm sm:text-lg font-medium text-black">
                     {workItem.company}
                   </h4>
-                  <span className="text-[12px] sm:text-sm text-gray-400 font-roboto-mono whitespace-nowrap">
+                  <span className="text-[10px] sm:text-sm text-gray-400 font-roboto-mono whitespace-nowrap">
                     {workItem.date}
                   </span>
                 </div>
