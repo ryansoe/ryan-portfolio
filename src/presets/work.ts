@@ -78,7 +78,7 @@ export const projects: Project[] = [
     id: 6,
     title: "In-N-Out Nutrition Calculator",
     date: "August 2025",
-    desc: "Quickly explore In-N-Out menu nutrition. Add items to your tray to see live totals for calories, macros, sodium and more. Use the summary at the bottom to adjust quantities or reset.",
+    desc: "A nutrition calculator for In-N-Out menu items with live tracking of calories and macros",
     tags: ["Web", "Health", "Personal"],
     imageUrl: "/projects/innout.png",
     projectUrl: "https://in-n-out-nutrition.vercel.app/",

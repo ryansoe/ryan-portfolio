@@ -19,29 +19,9 @@ export default function Home() {
     window.scrollTo(0, 0);
   }, []);
 
-  // Change background color based on scroll position
+  // Set background color to white
   useEffect(() => {
-    const handleScroll = () => {
-      if (heroRef.current) {
-        const heroBottom = heroRef.current.offsetHeight;
-        const scrollPosition = window.scrollY;
-
-        // Change to white when scrolled past hero section
-        if (scrollPosition > heroBottom - 100) {
-          document.body.style.backgroundColor = "#ffffff";
-        } else {
-          document.body.style.backgroundColor = "#80c0e1";
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    // Set initial background color
-    document.body.style.backgroundColor = "#80c0e1";
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    document.body.style.backgroundColor = "#ffffff";
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -56,7 +36,7 @@ export default function Home() {
         ref={heroRef}
         className="pt-10 md:pt-16 pb-16"
         style={{
-          background: "linear-gradient(to bottom, #80c0e1 0%, #ffffff 100%)",
+          backgroundColor: "#ffffff",
         }}
       >
         <HeroSection />
@@ -68,7 +48,7 @@ export default function Home() {
       <div
         className="pt-10"
         style={{
-          background: "linear-gradient(to bottom, #ffffff 0%, #fbb4d4 100%)",
+          backgroundColor: "#ffffff",
         }}
       >
         <Footer />
