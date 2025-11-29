@@ -1,5 +1,6 @@
 import { Project } from "@/presets/work";
 import Image from "next/image";
+import { AnimatedUnderline } from "@/components/ui/animated-underline";
 
 export default function ProjectCard({
   title,
@@ -103,15 +104,17 @@ export default function ProjectCard({
                 href={projectUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative inline-flex items-center gap-1 text-sm font-medium text-black underline-lr font-roboto-mono"
+                className="group relative inline-flex items-center gap-1 no-underline"
               >
-                Explore{" "}
-                <span
-                  aria-hidden
-                  className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                >
-                  ↗
-                </span>
+                <AnimatedUnderline className="text-sm font-medium text-black font-roboto-mono">
+                  Explore{" "}
+                  <span
+                    aria-hidden
+                    className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  >
+                    ↗
+                  </span>
+                </AnimatedUnderline>
               </a>
             )}
             {githubUrl && (
@@ -119,15 +122,17 @@ export default function ProjectCard({
                 href={githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative inline-flex items-center gap-1 text-sm font-medium text-black underline-lr font-roboto-mono"
+                className="group relative inline-flex items-center gap-1 no-underline"
               >
-                GitHub{" "}
-                <span
-                  aria-hidden
-                  className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                >
-                  ↗
-                </span>
+                <AnimatedUnderline className="text-sm font-medium text-black font-roboto-mono">
+                  GitHub{" "}
+                  <span
+                    aria-hidden
+                    className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  >
+                    ↗
+                  </span>
+                </AnimatedUnderline>
               </a>
             )}
           </div>

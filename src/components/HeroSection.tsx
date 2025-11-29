@@ -1,13 +1,8 @@
 import { personalInfo } from "@/presets/personal";
 import { useEffect, useRef, useState } from "react";
+import { AnimatedUnderline } from "@/components/ui/animated-underline";
 
 const HeroSection = () => {
-  const linkClassName = [
-    "group relative inline-flex items-center gap-1",
-    "no-underline font-medium text-xs sm:text-sm uppercase tracking-wide text-black leading-none",
-    "underline-lr",
-  ].join(" ");
-
   const [activeLinkIndex, setActiveLinkIndex] = useState<number | null>(null);
   const activeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -57,11 +52,13 @@ const HeroSection = () => {
               onTouchStart={() => handleTouchStart(index)}
               onTouchEnd={handleTouchEnd}
               onTouchCancel={handleTouchEnd}
-              className={`${linkClassName} ${
+              className={`no-underline ${
                 activeLinkIndex === index ? "bg-gray-100" : ""
               }`}
             >
-              {link.name}
+              <AnimatedUnderline className="font-medium text-xs sm:text-sm uppercase tracking-wide text-black leading-none">
+                {link.name}
+              </AnimatedUnderline>
             </a>
           ))}
         </div>
