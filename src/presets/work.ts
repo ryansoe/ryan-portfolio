@@ -28,7 +28,7 @@ export const work: Work[] = [
   {
     id: 2,
     company: "Data Science Alliance",
-    date: "2025 - Present",
+    date: "2025 - 2025",
     type: "Internship",
     imageUrl: "/work/dsa.jpeg",
   },
