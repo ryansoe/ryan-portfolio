@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# npm (local cache used for installs)
+.npm-cache/
+
 # production
 /build
 
