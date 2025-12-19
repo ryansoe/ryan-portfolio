@@ -1,6 +1,8 @@
 import { Project } from "@/presets/work";
 import Image from "next/image";
 import { AnimatedUnderline } from "@/components/ui/animated-underline";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 export default function ProjectCard({
   title,
@@ -93,9 +95,22 @@ export default function ProjectCard({
           </div>
 
           {/* Description */}
-          <p className="text-gray-900 text-sm leading-relaxed font-roboto-mono">
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            components={{
+              p: ({ children }) => (
+                <p className="text-gray-900 text-sm leading-relaxed font-roboto-mono">
+                  {children}
+                </p>
+              ),
+              em: ({ children }) => <em className="italic">{children}</em>,
+              strong: ({ children }) => (
+                <strong className="font-bold">{children}</strong>
+              ),
+            }}
+          >
             {desc}
-          </p>
+          </ReactMarkdown>
 
           {/* Links */}
           <div className="flex items-center gap-6 pt-3">
