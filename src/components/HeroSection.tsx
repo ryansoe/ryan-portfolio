@@ -1,3 +1,5 @@
+"use client";
+
 import { personalInfo } from "@/presets/personal";
 import { useEffect, useRef, useState } from "react";
 import { AnimatedUnderline } from "@/components/ui/animated-underline";
@@ -45,10 +47,11 @@ const HeroSection = () => {
         <div className="flex flex-row justify-start gap-3 sm:gap-6 font-roboto-mono">
           {personalInfo.links.map((link, index) => (
             <a
-              key={index}
+              key={link.name}
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`Visit ${link.name}`}
               onTouchStart={() => handleTouchStart(index)}
               onTouchEnd={handleTouchEnd}
               onTouchCancel={handleTouchEnd}

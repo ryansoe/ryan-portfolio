@@ -2,19 +2,24 @@ export interface PersonalInfo {
   name: string;
   title: string;
   description: string;
+  email: string;
+  repoUrl: string;
+  version: string;
   links: SocialLink[];
 }
 
 export interface SocialLink {
   name: string;
   url: string;
-  icon?: string;
 }
 
 export const personalInfo: PersonalInfo = {
   name: "Ryan Soe",
   title: "Full Stack Developer",
   description: "Full-stack developer building user-first software",
+  email: "ryansoe26@gmail.com",
+  repoUrl: "https://github.com/ryansoe/ryan-portfolio",
+  version: "2.0",
   links: [
     {
       name: "LinkedIn",

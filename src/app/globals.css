@@ -9,10 +9,6 @@
 
 @import "tailwindcss";
 
-@theme {
-  --color-primary: #000000;
-}
-
 html,
 body {
   margin: 0;
@@ -46,7 +42,7 @@ h2 {
 }
 
 h3 {
-  @apply text-4xl md:text-3xl font-bold;
+  @apply text-2xl md:text-xl font-bold;
 }
 
 /* Recoleta utility class */
@@ -57,19 +53,6 @@ h3 {
 /* Roboto Mono utility class */
 .font-roboto-mono {
   font-family: var(--font-roboto-mono);
-}
-
-/* a {
-  @apply text-black underline hover:text-gray-600 transition-colors;
-} */
-
-input,
-textarea {
-  @apply border border-gray-300 rounded px-3 py-2 text-black bg-white;
-}
-
-button {
-  @apply bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition;
 }
 
 section {
@@ -126,23 +109,18 @@ section {
   transform: translateY(0);
 }
 
-/* Custom underline effect that appears left-to-right and disappears left-to-right */
-.underline-lr::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  height: 1px;
-  width: 100%;
-  background-color: black;
-  transform: scaleX(0);
-  transform-origin: right center;
-  transition: transform 0.2s ease;
+/* Project card hover effect */
+.project-card-hover {
+  box-shadow: none;
 }
 
-.underline-lr:hover::after,
-.underline-lr:focus-visible::after {
-  transform: scaleX(1);
-  transform-origin: left center;
-  transition: transform 0.2s ease;
+.project-card-hover:hover {
+  box-shadow: 8px 8px 0px #000000;
+  background: linear-gradient(135deg, #f472b6 0%, #fb923c 33%, #fde68a 50%, #ffffff 66%, #60a5fa 100%);
+}
+
+/* Emoji text rendering */
+.emoji-text {
+  font-family: monospace;
+  font-variant-emoji: text;
 }

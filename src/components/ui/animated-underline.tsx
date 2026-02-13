@@ -1,5 +1,3 @@
-"use client";
-
 interface AnimatedUnderlineProps {
   children?: React.ReactNode;
   className?: string;

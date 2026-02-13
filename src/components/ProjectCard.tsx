@@ -13,22 +13,27 @@ export default function ProjectCard({
   projectUrl,
   githubUrl,
 }: Project) {
+  const projectImage = (
+    <div className="relative w-full h-44 sm:h-52 md:w-56 md:h-36 overflow-hidden bg-gray-50 shadow-sm group/image rounded-lg">
+      <Image
+        src={imageUrl}
+        alt={title}
+        width={224}
+        height={144}
+        className="w-full h-full object-cover transition-all duration-300 group-hover/image:brightness-75"
+      />
+      {projectUrl && (
+        <div className="absolute top-2 right-2 opacity-0 group-hover/image:opacity-100 transition-opacity duration-300">
+          <span className="text-white text-xl font-bold">↗</span>
+        </div>
+      )}
+    </div>
+  );
+
   return (
-    <div
-      className="group p-6 transition-all duration-300 bg-white border-2 border-black rounded-lg hover:transform hover:-translate-y-2"
-      style={{ boxShadow: "none" }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.boxShadow = "8px 8px 0px #000000";
-        e.currentTarget.style.background =
-          "linear-gradient(135deg, #f472b6 0%, #fb923c 33%, #fde68a 50%, #ffffff 66%, #60a5fa 100%)";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.boxShadow = "none";
-        e.currentTarget.style.background = "white";
-      }}
-    >
+    <div className="group p-6 transition-all duration-300 bg-white border-2 border-black rounded-lg hover:transform hover:-translate-y-2 project-card-hover">
       <div className="flex flex-col md:flex-row items-start gap-6">
-        {/* Left side - Image (clickable if projectUrl exists) */}
+        {/* Left side - Image */}
         <div className="w-full md:w-auto">
           {projectUrl ? (
             <a
@@ -37,30 +42,10 @@ export default function ProjectCard({
               rel="noopener noreferrer"
               className="block"
             >
-              <div className="relative w-full h-44 sm:h-52 md:w-56 md:h-36 overflow-hidden bg-gray-50 shadow-sm group/image rounded-lg">
-                <Image
-                  src={imageUrl}
-                  alt={title}
-                  width={224}
-                  height={144}
-                  className="w-full h-full object-cover transition-all duration-300 group-hover/image:brightness-75"
-                />
-                {/* Arrow icon for projects with links */}
-                <div className="absolute top-2 right-2 opacity-0 group-hover/image:opacity-100 transition-opacity duration-300">
-                  <span className="text-white text-xl font-bold">↗</span>
-                </div>
-              </div>
+              {projectImage}
             </a>
           ) : (
-            <div className="relative w-full h-44 sm:h-52 md:w-56 md:h-36 overflow-hidden bg-gray-50 shadow-sm group/image rounded-lg">
-              <Image
-                src={imageUrl}
-                alt={title}
-                width={224}
-                height={144}
-                className="w-full h-full object-cover transition-all duration-300 group-hover/image:brightness-75"
-              />
-            </div>
+            projectImage
           )}
         </div>
 
@@ -78,20 +63,14 @@ export default function ProjectCard({
 
           {/* Tags */}
           <div className="flex flex-wrap gap-2">
-            {Array.isArray(tags) ? (
-              tags.map((tag, index) => (
-                <span
-                  key={index}
-                  className="px-2.5 py-0.5 bg-gray-200 text-black text-xs font-medium rounded-md font-roboto-mono uppercase"
-                >
-                  {tag}
-                </span>
-              ))
-            ) : (
-              <span className="px-2.5 py-0.5 bg-gray-200 text-black text-xs font-medium rounded-md font-roboto-mono uppercase">
-                {tags}
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className="px-2.5 py-0.5 bg-gray-200 text-black text-xs font-medium rounded-md font-roboto-mono uppercase"
+              >
+                {tag}
               </span>
-            )}
+            ))}
           </div>
 
           {/* Description */}
