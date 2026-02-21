@@ -43,6 +43,7 @@ export const projects: Project[] = [
     desc: "A daily journaling app to turn your everyday thoughts into aesthetic memory cards",
     tags: ["Web", "Mental Health", "Academic"],
     imageUrl: "/projects/prompted.png",
+    videoUrl: "/projects/prompted.mp4",
     projectUrl:
       "https://cse110-sp25-group18.github.io/project-card-journaling/index.html",
     githubUrl: "https://github.com/cse110-sp25-group18/project-card-journaling",
@@ -65,6 +66,7 @@ export const projects: Project[] = [
     desc: "A not-so insane chess engine",
     tags: ["AI", "Chess", "Personal"],
     imageUrl: "/projects/rice.png",
+    videoUrl: "/projects/rice.mp4",
     githubUrl: "https://github.com/ryansoe/rice",
   },
   {
@@ -84,6 +86,7 @@ export const projects: Project[] = [
     desc: "Budget tracking app designed to help UCSD students manage their personal finances effectively",
     tags: ["Mobile", "Finance", "Open Source"],
     imageUrl: "/projects/tritonspend.png",
+    videoUrl: "/projects/tritonspend.mp4",
     githubUrl: "https://github.com/CSES-Open-Source/TritonSpend",
   },
 ];
