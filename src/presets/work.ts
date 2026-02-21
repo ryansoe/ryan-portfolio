@@ -5,6 +5,7 @@ export interface Project {
   desc: string;
   tags: string[];
   imageUrl: string;
+  videoUrl?: string;
   projectUrl?: string;
   githubUrl?: string;
 }
@@ -53,6 +54,7 @@ export const projects: Project[] = [
     desc: "Track your favorite events announced on Discord servers through a dashboard on the web",
     tags: ["Web", "Social", "Hackathon"],
     imageUrl: "/projects/eventory.png",
+    videoUrl: "/projects/eventory.mp4",
     projectUrl: "https://devpost.com/software/eventory-pnfrq1",
     githubUrl: "https://github.com/ryansoe/diamond-hacks-education",
   },

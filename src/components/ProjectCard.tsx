@@ -1,3 +1,6 @@
+"use client";
+
+import { useRef, useState } from "react";
 import { Project } from "@/presets/work";
 import Image from "next/image";
 import { AnimatedUnderline } from "@/components/ui/animated-underline";
@@ -9,28 +12,60 @@ export default function ProjectCard({
   desc,
   tags,
   imageUrl,
+  videoUrl,
   projectUrl,
   githubUrl,
 }: Project) {
+  const [hovered, setHovered] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleMouseEnter = () => {
+    if (videoUrl && videoRef.current) {
+      setHovered(true);
+      videoRef.current.currentTime = 0;
+      videoRef.current.play();
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (videoUrl && videoRef.current) {
+      setHovered(false);
+      videoRef.current.pause();
+    }
+  };
+
   const projectImage = (
-    <div className="relative w-full h-44 sm:h-52 md:w-56 md:h-36 overflow-hidden bg-gray-50 shadow-sm group/image rounded-lg">
+    <div className="relative w-full h-44 sm:h-52 md:w-56 md:h-36 overflow-hidden bg-gray-50 shadow-sm rounded-lg">
       <Image
         src={imageUrl}
         alt={title}
         width={224}
         height={144}
-        className="w-full h-full object-cover transition-all duration-300 group-hover/image:brightness-75"
+        className={`w-full h-full object-cover transition-opacity duration-300 ${
+          hovered && videoUrl ? "opacity-0" : "opacity-100"
+        }`}
       />
-      {projectUrl && (
-        <div className="absolute top-2 right-2 opacity-0 group-hover/image:opacity-100 transition-opacity duration-300">
-          <span className="text-white text-xl font-bold">↗</span>
-        </div>
+      {videoUrl && (
+        <video
+          ref={videoRef}
+          src={videoUrl}
+          loop
+          muted
+          playsInline
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+            hovered ? "opacity-100" : "opacity-0"
+          }`}
+        />
       )}
     </div>
   );
 
   return (
-    <div className="group p-6 transition-all duration-300 bg-white border-2 border-black rounded-lg hover:transform hover:-translate-y-2 project-card-hover">
+    <div
+      className="group p-6 transition-all duration-300 bg-white border-2 border-black rounded-lg hover:transform hover:-translate-y-2 project-card-hover"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className="flex flex-col md:flex-row items-start gap-6">
         {/* Left side - Image */}
         <div className="w-full md:w-auto">
