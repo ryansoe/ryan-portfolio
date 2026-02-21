@@ -1,7 +1,7 @@
 // components/ProjectSection.tsx
 import { projects } from "@/presets/work";
 import AnimatedProjectCard from "./AnimatedProjectCard";
-import Image from "next/image";
+import NoisyIcon from "./NoisyIcon";
 
 const ProjectSection = () => {
   const sortedProjects = [...projects].sort((a, b) => b.id - a.id);
@@ -13,11 +13,10 @@ const ProjectSection = () => {
     >
       <div className="max-w-full sm:max-w-[95%] lg:max-w-[66.67%] mx-auto">
         <div className="flex items-center justify-center gap-2 mb-5">
-          <Image
+          <NoisyIcon
             src="/icons/projects.svg"
             alt="Projects icon"
-            width={24}
-            height={24}
+            size={24}
             className="w-10 h-10"
           />
           <h2 className="text-2xl font-bold">Projects</h2>

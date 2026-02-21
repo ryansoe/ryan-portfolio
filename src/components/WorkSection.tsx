@@ -1,5 +1,6 @@
 import { work } from "@/presets/work";
 import Image from "next/image";
+import NoisyIcon from "./NoisyIcon";
 
 const WorkSection = () => {
   const sortedWork = [...work].sort((a, b) => b.id - a.id);
@@ -11,11 +12,10 @@ const WorkSection = () => {
           className="flex items-center justify-center gap-2 mb-5 page-load-animate"
           style={{ animationDelay: "200ms" }}
         >
-          <Image
+          <NoisyIcon
             src="/icons/work.svg"
             alt="Work icon"
-            width={24}
-            height={24}
+            size={24}
             className="w-10 h-10"
           />
           <h2 className="text-2xl font-bold">Experience</h2>
