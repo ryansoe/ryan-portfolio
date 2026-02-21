@@ -22,16 +22,23 @@ export const work: Work[] = [
   {
     id: 1,
     company: "The Great Game",
-    date: "2025 - 2025",
-    type: "Internship",
+    date: "2025",
+    type: "Software",
     imageUrl: "/work/tgg.jpeg",
   },
   {
     id: 2,
     company: "Data Science Alliance",
-    date: "2025 - 2025",
-    type: "Internship",
+    date: "2025",
+    type: "Software",
     imageUrl: "/work/dsa.jpeg",
+  },
+  {
+    id: 3,
+    company: "Algoverse",
+    date: "2026 - Present",
+    type: "Research",
+    imageUrl: "/work/algoverse.jpeg",
   },
 ];
 
