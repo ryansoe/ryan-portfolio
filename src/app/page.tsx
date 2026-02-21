@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div>
+    <div className="max-w-[1920px] mx-auto">
       <HeroSection />
       <WorkSection />
       <ProjectSection />

@@ -35,7 +35,7 @@ export default function ProjectCard({
   };
 
   const projectImage = (
-    <div className="relative w-full h-44 sm:h-52 md:w-56 md:h-36 overflow-hidden bg-gray-50 shadow-sm rounded-lg">
+    <div className="relative w-full h-56 overflow-hidden bg-gray-50 shadow-sm rounded-lg">
       <Image
         src={imageUrl}
         alt={title}
@@ -66,9 +66,9 @@ export default function ProjectCard({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="flex flex-col md:flex-row items-start gap-6">
+      <div className="flex flex-col items-start gap-4">
         {/* Left side - Image */}
-        <div className="w-full md:w-auto">
+        <div className="w-full">
           {projectUrl ? (
             <a
               href={projectUrl}

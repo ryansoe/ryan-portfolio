@@ -21,7 +21,7 @@ const ProjectSection = () => {
           />
           <h2 className="text-2xl font-bold">Projects</h2>
         </div>
-        <div className="space-y-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {sortedProjects.map((project, index) => (
             <AnimatedProjectCard key={project.id} index={index} {...project} />
           ))}
