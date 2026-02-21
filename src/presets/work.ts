@@ -80,7 +80,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/ryansoe/innout-nutrition-calculator",
   },
   {
-    id: 7,
+    id: 8,
     title: "TritonSpend",
     date: "Oct. 2025 - Present",
     desc: "Budget tracking app designed to help UCSD students manage their personal finances effectively",
@@ -89,4 +89,13 @@ export const projects: Project[] = [
     videoUrl: "/projects/tritonspend.mp4",
     githubUrl: "https://github.com/CSES-Open-Source/TritonSpend",
   },
+  {
+    id: 7,
+    title: "Data Quest: The Secrets of Soltryss",
+    date: "...",
+    desc: "A magical world of wizards, kings, and enchanting creatures, where players are introduced to data science **[CLOSED SOURCE]**",
+    tags: ["Video Game", "Educational", "Nonprofit"],
+    imageUrl: "/projects/dataquest.png",
+    videoUrl: "/projects/dataquest.mp4",
+  }
 ];
