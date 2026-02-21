@@ -39,9 +39,9 @@ export default function ProjectCard({
       <Image
         src={imageUrl}
         alt={title}
-        width={224}
-        height={144}
-        className={`w-full h-full object-cover transition-opacity duration-300 ${
+        fill
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 672px"
+        className={`object-cover transition-opacity duration-300 ${
           hovered && videoUrl ? "opacity-0" : "opacity-100"
         }`}
       />
