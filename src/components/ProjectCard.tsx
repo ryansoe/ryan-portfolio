@@ -6,7 +6,6 @@ import remarkGfm from "remark-gfm";
 
 export default function ProjectCard({
   title,
-  date,
   desc,
   tags,
   imageUrl,
@@ -56,9 +55,6 @@ export default function ProjectCard({
             <h3 className="text-2xl md:text-2xl font-semibold text-black">
               {title}
             </h3>
-            <span className="text-sm text-gray-400 font-roboto-mono">
-              {date}
-            </span>
           </div>
 
           {/* Tags */}
@@ -66,7 +62,7 @@ export default function ProjectCard({
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="px-2.5 py-0.5 bg-gray-200 text-black text-xs font-medium rounded-md font-roboto-mono uppercase"
+                className="px-2.5 py-0.5 bg-gray-200 group-hover:bg-white/40 group-hover:backdrop-blur-sm text-black text-xs font-medium rounded-md font-roboto-mono uppercase transition-all duration-300"
               >
                 {tag}
               </span>
