@@ -76,6 +76,7 @@ export const projects: Project[] = [
     desc: '*"Let me get a double-double animal style with chopped chilis and medium-well fries with a diet coke please"*',
     tags: ["Web", "Health", "Personal"],
     imageUrl: "/projects/innout.png",
+    videoUrl: "/projects/innout.mp4",
     projectUrl: "https://in-n-out-nutrition.vercel.app/",
     githubUrl: "https://github.com/ryansoe/innout-nutrition-calculator",
   },
