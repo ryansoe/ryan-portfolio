@@ -16,31 +16,36 @@ export default function AnimatedProjectCard({
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            // Once visible, stop observing
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.2, // Trigger when 20% of the card is visible
-        rootMargin: "0px",
-      }
-    );
+    // Delay starting the observer so cards already in the viewport on load
+    // wait for the page-load cascade to finish (Projects header fades in at 750ms)
+    const startDelay = setTimeout(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setIsVisible(true);
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.2,
+          rootMargin: "0px",
+        }
+      );
 
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
-    }
-
-    return () => {
       if (cardRef.current) {
-        observer.unobserve(cardRef.current);
+        observer.observe(cardRef.current);
       }
-    };
+
+      return () => {
+        if (cardRef.current) {
+          observer.unobserve(cardRef.current);
+        }
+      };
+    }, 900);
+
+    return () => clearTimeout(startDelay);
   }, []);
 
   return (
