@@ -23,7 +23,7 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ryan Soe",
+  title: "Ryan Soe // Software Engineer",
   description: "My personal website",
 };
 
