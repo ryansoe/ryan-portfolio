@@ -62,11 +62,11 @@ export default function ProjectCard({
 
   return (
     <div
-      className="group p-6 transition-all duration-300 bg-white border-2 border-black rounded-lg hover:transform hover:-translate-y-2 project-card-hover"
+      className="group p-6 transition-all duration-300 bg-white border-2 border-black rounded-lg hover:transform hover:-translate-y-2 project-card-hover h-full flex flex-col"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="flex flex-col items-start gap-4">
+      <div className="flex flex-col items-start gap-4 flex-1">
         {/* Left side - Image */}
         <div className="w-full">
           {projectUrl ? (
@@ -84,7 +84,7 @@ export default function ProjectCard({
         </div>
 
         {/* Right side - Content */}
-        <div className="flex-1 space-y-3">
+        <div className="flex-1 flex flex-col space-y-3">
           {/* Title and Date */}
           <div className="flex items-baseline gap-3 flex-wrap">
             <h3 className="text-2xl md:text-2xl font-semibold text-black">
@@ -123,7 +123,7 @@ export default function ProjectCard({
           </ReactMarkdown>
 
           {/* Links */}
-          <div className="flex items-center gap-6 pt-3">
+          <div className="flex items-center gap-6 pt-3 mt-auto">
             {projectUrl && (
               <a
                 href={projectUrl}
