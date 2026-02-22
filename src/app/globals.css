@@ -107,6 +107,20 @@ section {
   transform: translateY(0);
 }
 
+/* Generic scroll-triggered fade-in */
+.scroll-fade-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-fade-animate.scroll-fade-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Project card hover effect */
 .project-card-hover {
   box-shadow: none;

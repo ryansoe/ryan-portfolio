@@ -1,6 +1,7 @@
 import { work } from "@/presets/work";
 import Image from "next/image";
 import NoisyIcon from "./NoisyIcon";
+import FadeInOnLoad from "./FadeInOnLoad";
 
 const WorkSection = () => {
   const sortedWork = [...work].sort((a, b) => b.id - a.id);
@@ -8,21 +9,20 @@ const WorkSection = () => {
   return (
     <section className="mb-16 px-4 bg-white">
       <div className="max-w-full sm:max-w-[95%] lg:max-w-[60%] mx-auto">
-        <div
-          className="flex items-center justify-center gap-2 mb-5 page-load-animate"
-          style={{ animationDelay: "200ms" }}
-        >
-          <NoisyIcon
-            src="/icons/work.svg"
-            alt="Work icon"
-            size={24}
-            className="w-10 h-10"
-          />
-          <h2 className="text-2xl font-bold">Experience</h2>
-        </div>
+        <FadeInOnLoad delay={450}>
+          <div className="flex items-center justify-center gap-2 mb-5">
+            <NoisyIcon
+              src="/icons/work.svg"
+              alt="Work icon"
+              size={24}
+              className="w-10 h-10"
+            />
+            <h2 className="text-2xl font-bold">Experience</h2>
+          </div>
+        </FadeInOnLoad>
         <div
           className="bg-white border-2 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] pop-out-animate"
-          style={{ animationDelay: "300ms" }}
+          style={{ animationDelay: "600ms" }}
         >
           {sortedWork.map((workItem, index) => (
             <div key={workItem.id}>

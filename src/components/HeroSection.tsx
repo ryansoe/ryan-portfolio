@@ -3,6 +3,7 @@
 import { personalInfo } from "@/presets/personal";
 import { useEffect, useRef, useState } from "react";
 import { AnimatedUnderline } from "@/components/ui/animated-underline";
+import FadeInOnLoad from "@/components/FadeInOnLoad";
 
 const HeroSection = () => {
   const [activeLinkIndex, setActiveLinkIndex] = useState<number | null>(null);
@@ -36,35 +37,41 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="px-4 pt-8 md:pt-12 pb-8 bg-white page-load-animate">
+    <section className="px-4 pt-8 md:pt-12 pb-8 bg-white">
       <div className="max-w-full sm:max-w-[95%] lg:max-w-[66.67%] mx-auto text-left">
-        <h1 className="font-medium mb-2 text-black">{personalInfo.name}</h1>
+        <FadeInOnLoad delay={0}>
+          <h1 className="font-medium mb-2 text-black">{personalInfo.name}</h1>
+        </FadeInOnLoad>
 
-        <p className="text-lg sm:text-xl font-medium text-black mb-4 leading-relaxed">
-          {personalInfo.description}
-        </p>
+        <FadeInOnLoad delay={150}>
+          <p className="text-lg sm:text-xl font-medium text-black mb-4 leading-relaxed">
+            {personalInfo.description}
+          </p>
+        </FadeInOnLoad>
 
-        <div className="flex flex-row justify-start gap-3 sm:gap-6 font-roboto-mono">
-          {personalInfo.links.map((link, index) => (
-            <a
-              key={link.name}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Visit ${link.name}`}
-              onTouchStart={() => handleTouchStart(index)}
-              onTouchEnd={handleTouchEnd}
-              onTouchCancel={handleTouchEnd}
-              className={`no-underline ${
-                activeLinkIndex === index ? "bg-gray-100" : ""
-              }`}
-            >
-              <AnimatedUnderline className="font-medium text-xs sm:text-sm uppercase tracking-wide text-black leading-none">
-                {link.name}
-              </AnimatedUnderline>
-            </a>
-          ))}
-        </div>
+        <FadeInOnLoad delay={300}>
+          <div className="flex flex-row justify-start gap-3 sm:gap-6 font-roboto-mono">
+            {personalInfo.links.map((link, index) => (
+              <a
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Visit ${link.name}`}
+                onTouchStart={() => handleTouchStart(index)}
+                onTouchEnd={handleTouchEnd}
+                onTouchCancel={handleTouchEnd}
+                className={`no-underline ${
+                  activeLinkIndex === index ? "bg-gray-100" : ""
+                }`}
+              >
+                <AnimatedUnderline className="font-medium text-xs sm:text-sm uppercase tracking-wide text-black leading-none">
+                  {link.name}
+                </AnimatedUnderline>
+              </a>
+            ))}
+          </div>
+        </FadeInOnLoad>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import { personalInfo } from "@/presets/personal";
+import FadeInOnScroll from "./FadeInOnScroll";
 
 const Footer = () => {
   const credit = `DESIGNED AND BUILT BY ${personalInfo.name.toUpperCase()}`;
@@ -6,8 +7,11 @@ const Footer = () => {
   return (
     <footer className="w-full bg-white pt-8 pb-8 px-4">
       <div className="max-w-full sm:max-w-[95%] lg:max-w-[66.67%] mx-auto">
-        <div className="border-t border-gray-300 pt-8">
-          <div className="flex flex-col gap-4 md:gap-0 text-xs font-roboto-mono uppercase tracking-wide text-black">
+        <FadeInOnScroll>
+          <div className="border-t border-gray-300" />
+        </FadeInOnScroll>
+        <FadeInOnScroll delay={100}>
+          <div className="pt-8 flex flex-col gap-4 md:gap-0 text-xs font-roboto-mono uppercase tracking-wide text-black">
             {/* Top row on mobile - Center text */}
             <div className="text-center md:hidden">
               <span>{credit}</span>
@@ -45,7 +49,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-        </div>
+        </FadeInOnScroll>
       </div>
     </footer>
   );
