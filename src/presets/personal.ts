@@ -19,7 +19,7 @@ export const personalInfo: PersonalInfo = {
   description: "Full-stack developer building user-first software",
   email: "ryansoe26@gmail.com",
   repoUrl: "https://github.com/ryansoe/ryan-portfolio",
-  version: "2.0",
+  version: "3.0",
   links: [
     {
       name: "LinkedIn",
