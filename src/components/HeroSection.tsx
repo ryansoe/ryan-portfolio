@@ -37,14 +37,14 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="px-4 pt-8 md:pt-12 pb-8 bg-white">
+    <section className="px-4 pt-8 md:pt-12 bg-white">
       <div className="max-w-full sm:max-w-[95%] lg:max-w-[66.67%] mx-auto text-left">
         <FadeInOnLoad delay={0}>
           <h1 className="font-medium mb-2 text-black">{personalInfo.name}</h1>
         </FadeInOnLoad>
 
         <FadeInOnLoad delay={150}>
-          <p className="text-lg sm:text-xl font-medium text-black mb-4 leading-relaxed">
+          <p className="text-lg sm:text-xl font-medium italic font-dm-serif text-black mb-2 leading-relaxed">
             {personalInfo.description}
           </p>
         </FadeInOnLoad>
