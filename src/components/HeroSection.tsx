@@ -50,7 +50,7 @@ const HeroSection = () => {
         </FadeInOnLoad>
 
         <FadeInOnLoad delay={300}>
-          <div className="flex flex-row justify-start gap-3 sm:gap-6 font-roboto-mono">
+          <div className="flex flex-col items-center sm:items-start sm:flex-row sm:justify-start sm:gap-6 font-roboto-mono mt-8 mb-8 sm:mt-0 sm:mb-0 gap-5">
             {personalInfo.links.map((link, index) => (
               <a
                 key={link.name}
@@ -65,7 +65,7 @@ const HeroSection = () => {
                   activeLinkIndex === index ? "bg-gray-100" : ""
                 }`}
               >
-                <AnimatedUnderline className="font-medium text-xs sm:text-sm uppercase tracking-wide text-black leading-none">
+                <AnimatedUnderline className="font-medium text-base sm:text-sm uppercase tracking-widest text-black leading-none">
                   {link.name}
                 </AnimatedUnderline>
               </a>
