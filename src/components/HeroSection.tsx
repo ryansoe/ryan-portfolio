@@ -65,7 +65,7 @@ const HeroSection = () => {
                   activeLinkIndex === index ? "bg-gray-100" : ""
                 }`}
               >
-                <AnimatedUnderline className="font-medium text-base sm:text-sm uppercase tracking-widest text-black leading-none">
+                <AnimatedUnderline className="font-medium text-sm sm:text-sm uppercase tracking-widest text-black leading-none">
                   {link.name}
                 </AnimatedUnderline>
               </a>
