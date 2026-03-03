@@ -20,7 +20,7 @@ const Footer = () => {
           </FadeInOnScroll>
 
           {/* Bottom row on mobile / Single row on desktop */}
-          <div className="flex justify-between items-center px-20 md:px-0">
+          <div className="flex justify-between items-center">
             {/* Left - Contact */}
             <FadeInOnScroll delay={200}>
               <a

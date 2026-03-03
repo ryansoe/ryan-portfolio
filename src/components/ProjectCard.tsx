@@ -65,6 +65,7 @@ export default function ProjectCard({
       className="group p-6 transition-all duration-300 bg-white border-2 border-black rounded-lg hover:transform hover:-translate-y-2 project-card-hover h-full flex flex-col"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+
     >
       <div className="flex flex-col items-start gap-4 flex-1">
         {/* Left side - Image */}
@@ -97,7 +98,7 @@ export default function ProjectCard({
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="px-2.5 py-0.5 bg-gray-200 group-hover:bg-white/40 group-hover:backdrop-blur-sm text-black text-xs font-medium rounded-md font-roboto-mono uppercase transition-all duration-300"
+                className="px-2.5 py-0.5 bg-gray-200 group-hover:bg-black/8 group-hover:backdrop-blur-sm active:bg-black/8 active:backdrop-blur-sm text-black text-xs font-medium rounded-md font-roboto-mono uppercase transition-all duration-300"
               >
                 {tag}
               </span>
