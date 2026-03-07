@@ -45,7 +45,7 @@ export const work: Work[] = [
 export const projects: Project[] = [
   {
     id: 3,
-    title: "Prompted - The Daily Journaling App",
+    title: "Prompted",
     date: "June 2025",
     desc: "A daily journaling app to turn your everyday thoughts into aesthetic memory cards",
     tags: ["Web", "Mental Health", "Academic"],
@@ -57,7 +57,7 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Eventory - Discord Event Tracker",
+    title: "Eventory",
     date: "April 2025",
     desc: "Track your favorite events announced on Discord servers through a dashboard on the web",
     tags: ["Web", "Social", "Hackathon"],
@@ -70,7 +70,7 @@ export const projects: Project[] = [
     id: 1,
     title: "RICE (Ryan's Insane Chess Engine)",
     date: "May 2024",
-    desc: "A not-so insane chess engine",
+    desc: "An insane chess engine",
     tags: ["AI", "Chess", "Personal"],
     imageUrl: "/projects/rice.png",
     videoUrl: "/projects/rice.mp4",
@@ -92,7 +92,7 @@ export const projects: Project[] = [
     title: "TritonSpend",
     date: "Oct. 2025 - Present",
     desc: "Budget tracking app designed to help UCSD students manage their personal finances effectively",
-    tags: ["Mobile", "Finance", "Open Source"],
+    tags: ["Mobile", "FinTech", "Open Source"],
     imageUrl: "/projects/tritonspend.png",
     videoUrl: "/projects/tritonspend.mp4",
     githubUrl: "https://github.com/CSES-Open-Source/TritonSpend",
@@ -101,9 +101,19 @@ export const projects: Project[] = [
     id: 7,
     title: "Data Quest: The Secrets of Soltryss",
     date: "...",
-    desc: "A magical world of wizards, kings, and enchanting creatures, where players are introduced to data science **[CLOSED SOURCE]**",
-    tags: ["Video Game", "Educational", "Nonprofit"],
+    desc: "A magical world of wizards, kings, and enchanting creatures, where players are introduced to data science **[CLOSED SOURCE - Details available upon request]**",
+    tags: ["Game", "Education", "Nonprofit"],
     imageUrl: "/projects/dataquest.png",
     videoUrl: "/projects/dataquest.mp4",
-  }
+  },
+  {
+    id: 9,
+    title: "Hexsmith",
+    date: "",
+    desc: "A browser-based IDE with an AI coding assistant, in-browser execution with live preview, and GitHub import/export",
+    tags: ["Web", "AI", "Personal"],
+    imageUrl: "/projects/hexsmith.png",
+    projectUrl: "https://hexsmith.vercel.app/",
+    githubUrl: "https://github.com/ryansoe/hexsmith",
+  },
 ];
