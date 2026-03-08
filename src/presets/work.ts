@@ -113,6 +113,7 @@ export const projects: Project[] = [
     desc: "A browser-based IDE with an AI coding assistant, in-browser execution with live preview, and GitHub import/export",
     tags: ["Web", "AI", "Personal"],
     imageUrl: "/projects/hexsmith.png",
+    videoUrl: "/projects/hexsmith.mp4",
     projectUrl: "https://hexsmith.vercel.app/",
     githubUrl: "https://github.com/ryansoe/hexsmith",
   },
