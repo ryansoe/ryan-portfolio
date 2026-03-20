@@ -16,7 +16,7 @@ export interface SocialLink {
 export const personalInfo: PersonalInfo = {
   name: "Ryan Soe",
   title: "Full Stack Developer",
-  description: "Full-stack developer building user-first software",
+  description: "Full-stack developer on the ML track",
   email: "ryansoe26@gmail.com",
   repoUrl: "https://github.com/ryansoe/ryan-portfolio",
   version: "3.0",

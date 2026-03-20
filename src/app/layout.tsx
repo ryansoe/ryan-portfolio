@@ -1,9 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import {
-  Geist,
-  Geist_Mono,
-  Roboto_Mono,
-} from "next/font/google";
+import { Geist, Geist_Mono, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import ScrollToTop from "@/components/ScrollToTop";
 
@@ -25,7 +21,7 @@ const robotoMono = Roboto_Mono({
 
 export const metadata: Metadata = {
   title: "Ryan Soe // Software Engineer",
-  description: "My personal website",
+  description: "Full-stack developer on the ML track",
 };
 
 export const viewport: Viewport = {
