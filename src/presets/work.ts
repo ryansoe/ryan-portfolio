@@ -95,6 +95,7 @@ export const projects: Project[] = [
     tags: ["Mobile", "FinTech", "Open Source"],
     imageUrl: "/projects/tritonspend.png",
     videoUrl: "/projects/tritonspend.mp4",
+    projectUrl: "https://tritonspend.netlify.app/",
     githubUrl: "https://github.com/CSES-Open-Source/TritonSpend",
   },
   {
